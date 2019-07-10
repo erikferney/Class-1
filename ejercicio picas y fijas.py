@@ -3,9 +3,9 @@ import random
 #import random as rn
 
 lista = []
-
+#valores=[x for x in randint(0,9) if not x in valores]
 for i in range(10):
-	item = random.randint(0,10)
+	item = random.randint(0,9)
 	
 	if not item in lista:
 		lista.append(item)
@@ -19,6 +19,11 @@ adivinado=False
 
 for i in range(5):
 	a=raw_input("Prueba tu suerte, ingresa un valor de no mas de tres caracteres: ")
+	
+	if len(a) <> 3:
+		print "La longitud maxima de la cadena es de tres digitos"
+		break
+		
 	indice = 0
 	picas = 0
 	fijas = 0
